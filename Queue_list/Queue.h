@@ -186,5 +186,7 @@ T TQueue<T>::GetHead()
 	T elem = pHead->val;
 	delete pHead;
 	pHead = tmp;
+	if(pHead==NULL)
+		pTail=NULL;
 	return elem;
 }
